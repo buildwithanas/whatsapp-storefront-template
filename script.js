@@ -1,5 +1,5 @@
 /* ================= EDIT THESE ================= */
-const SELLER_NUMBER = "2348012345678"; // country code + number, no "+" or spaces
+const SELLER_NUMBER = "2347043420968"; // country code + number, no "+" or spaces
 const STORE = "Adire & Co.";
 const CURRENCY = "₦";
 
