@@ -7,60 +7,60 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F1F3F8;--card:#fff;--ink:#14172B;--mute:#5B6079;--line:#D9DDE8;--brand:#1F2A5C;--brand-ink:#fff;--sun:#E8B931;--wa:#128C4A;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1224;--card:#191D38;--ink:#EEF0F8;--mute:#9AA0BE;--line:#2B3057;--brand:#8E9CFF;--brand-ink:#0F1224;--sun:#E8B931;--wa:#25D366}}
-:root[data-theme="dark"]{--bg:#0F1224;--card:#191D38;--ink:#EEF0F8;--mute:#9AA0BE;--line:#2B3057;--brand:#8E9CFF;--brand-ink:#0F1224;--sun:#E8B931;--wa:#25D366}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 Figtree,system-ui,sans-serif}
-h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,sans-serif;margin:0;line-height:1.1}
-button{font:inherit;color:inherit;cursor:pointer}
-:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
-header{background:var(--brand);color:var(--brand-ink);padding:28px 20px 24px}
-.wrap{max-width:1000px;margin:0 auto}
-header h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:800;letter-spacing:-.02em}
-header p{margin:8px 0 0;max-width:46ch;opacity:.85}
-.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 20px}
-.bar .wrap{display:flex;gap:10px;align-items:center}
-.chips{display:flex;gap:8px;overflow-x:auto;flex:1;padding:2px}
-.chip{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px;white-space:nowrap}
-.chip[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
-.cartbtn{background:var(--sun);color:#14172B;border:0;border-radius:12px;padding:9px 14px;font-weight:600;white-space:nowrap}
-main{padding:22px 20px 100px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-.swatch{aspect-ratio:4/3;display:grid;place-items:center;font:800 2.6rem "Bricolage Grotesque",sans-serif;color:rgba(255,255,255,.92)}
-.info{padding:14px;display:flex;flex-direction:column;gap:4px;flex:1}
-.info h3{font-size:1.1rem}
-.info small{color:var(--mute)}
-.price{font-weight:600;margin-top:auto;padding-top:8px}
-.add{margin-top:8px;border:2px solid var(--brand);background:transparent;color:var(--brand);border-radius:10px;padding:8px;font-weight:600}
-.add:hover{background:var(--brand);color:var(--brand-ink)}
-.qty{display:flex;align-items:center;justify-content:space-between;margin-top:8px;border:2px solid var(--brand);border-radius:10px}
-.qty button{border:0;background:none;width:44px;height:38px;font-size:1.2rem;color:var(--brand)}
-.qty span{font-weight:600}
-dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%;margin:0}
-dialog::backdrop{background:rgba(10,12,30,.55)}
-.sheet{position:fixed;right:0;top:0;bottom:0;width:min(440px,100%);background:var(--card);color:var(--ink);display:flex;flex-direction:column;padding:20px;padding-top:calc(20px + env(safe-area-inset-top,0px));padding-bottom:calc(20px + env(safe-area-inset-bottom,0px));animation:slide .22s ease-out}
-@keyframes slide{from{transform:translateX(40px);opacity:0}}
-@media (prefers-reduced-motion:reduce){.sheet{animation:none}}
-.sheet header{background:none;color:inherit;padding:0 0 12px;display:flex;justify-content:space-between;align-items:center}
-.sheet h2{font-size:1.5rem}
-.x{border:0;background:none;font-size:1.6rem;width:44px;height:44px}
-.lines{flex:1;overflow:auto;border-top:1px solid var(--line)}
-.line{display:flex;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
-.line .n{flex:1}
-.line .n small{display:block;color:var(--mute)}
-.line .qty{margin:0;border-width:1px}
-.line .qty button{width:34px;height:32px}
-.empty{padding:40px 0;text-align:center;color:var(--mute)}
-.form{display:grid;gap:8px;padding-top:12px}
-input,textarea{width:100%;font:inherit;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
-.total{display:flex;justify-content:space-between;font-weight:600;font-size:1.15rem;padding:12px 0 4px}
-.send{display:block;text-align:center;text-decoration:none;background:var(--wa);color:#fff;border-radius:12px;padding:14px;font-weight:600;margin-top:8px}
-.send[aria-disabled="true"]{opacity:.4;pointer-events:none}
-.hint{font-size:.85rem;color:var(--mute);margin:6px 0 0}
+  :root{--bg:#F1F3F8;--card:#fff;--ink:#14172B;--mute:#5B6079;--line:#D9DDE8;--brand:#1F2A5C;--brand-ink:#fff;--sun:#E8B931;--wa:#128C4A;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1224;--card:#191D38;--ink:#EEF0F8;--mute:#9AA0BE;--line:#2B3057;--brand:#8E9CFF;--brand-ink:#0F1224;--sun:#E8B931;--wa:#25D366}}
+  :root[data-theme="dark"]{--bg:#0F1224;--card:#191D38;--ink:#EEF0F8;--mute:#9AA0BE;--line:#2B3057;--brand:#8E9CFF;--brand-ink:#0F1224;--sun:#E8B931;--wa:#25D366}
+  *,*::before,*::after{box-sizing:inherit}
+  html{scroll-padding-top:env(safe-area-inset-top,0px)}
+  body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 Figtree,system-ui,sans-serif}
+  h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,sans-serif;margin:0;line-height:1.1}
+  button{font:inherit;color:inherit;cursor:pointer}
+  :focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+  header{background:var(--brand);color:var(--brand-ink);padding:28px 20px 24px}
+  .wrap{max-width:1000px;margin:0 auto}
+  header h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:800;letter-spacing:-.02em}
+  header p{margin:8px 0 0;max-width:46ch;opacity:.85}
+  .bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 20px}
+  .bar .wrap{display:flex;gap:10px;align-items:center}
+  .chips{display:flex;gap:8px;overflow-x:auto;flex:1;padding:2px}
+  .chip{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px;white-space:nowrap}
+  .chip[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+  .cartbtn{background:var(--sun);color:#14172B;border:0;border-radius:12px;padding:9px 14px;font-weight:600;white-space:nowrap}
+  main{padding:22px 20px 100px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .swatch{aspect-ratio:4/3;display:grid;place-items:center;font:800 2.6rem "Bricolage Grotesque",sans-serif;color:rgba(255,255,255,.92)}
+  .info{padding:14px;display:flex;flex-direction:column;gap:4px;flex:1}
+  .info h3{font-size:1.1rem}
+  .info small{color:var(--mute)}
+  .price{font-weight:600;margin-top:auto;padding-top:8px}
+  .add{margin-top:8px;border:2px solid var(--brand);background:transparent;color:var(--brand);border-radius:10px;padding:8px;font-weight:600}
+  .add:hover{background:var(--brand);color:var(--brand-ink)}
+  .qty{display:flex;align-items:center;justify-content:space-between;margin-top:8px;border:2px solid var(--brand);border-radius:10px}
+  .qty button{border:0;background:none;width:44px;height:38px;font-size:1.2rem;color:var(--brand)}
+  .qty span{font-weight:600}
+  dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%;margin:0}
+  dialog::backdrop{background:rgba(10,12,30,.55)}
+  .sheet{position:fixed;right:0;top:0;bottom:0;width:min(440px,100%);background:var(--card);color:var(--ink);display:flex;flex-direction:column;padding:20px;padding-top:calc(20px + env(safe-area-inset-top,0px));padding-bottom:calc(20px + env(safe-area-inset-bottom,0px));animation:slide .22s ease-out}
+  @keyframes slide{from{transform:translateX(40px);opacity:0}}
+  @media (prefers-reduced-motion:reduce){.sheet{animation:none}}
+  .sheet header{background:none;color:inherit;padding:0 0 12px;display:flex;justify-content:space-between;align-items:center}
+  .sheet h2{font-size:1.5rem}
+  .x{border:0;background:none;font-size:1.6rem;width:44px;height:44px}
+  .lines{flex:1;overflow:auto;border-top:1px solid var(--line)}
+  .line{display:flex;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+  .line .n{flex:1}
+  .line .n small{display:block;color:var(--mute)}
+  .line .qty{margin:0;border-width:1px}
+  .line .qty button{width:34px;height:32px}
+  .empty{padding:40px 0;text-align:center;color:var(--mute)}
+  .form{display:grid;gap:8px;padding-top:12px}
+  input,textarea{width:100%;font:inherit;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
+  .total{display:flex;justify-content:space-between;font-weight:600;font-size:1.15rem;padding:12px 0 4px}
+  .send{display:block;text-align:center;text-decoration:none;background:var(--wa);color:#fff;border-radius:12px;padding:14px;font-weight:600;margin-top:8px}
+  .send[aria-disabled="true"]{opacity:.4;pointer-events:none}
+  .hint{font-size:.85rem;color:var(--mute);margin:6px 0 0}
 </style>
 </head>
 <body>
